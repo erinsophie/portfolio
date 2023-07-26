@@ -1,4 +1,5 @@
 import '../styles/About.css';
+import Carousel from './Carousel';
 
 function About() {
   return (
@@ -26,9 +27,7 @@ function About() {
         </p>
       </div>
 
-      <div className="skills">
-          
-      </div>
+      <Carousel />
     </div>
   );
 }
