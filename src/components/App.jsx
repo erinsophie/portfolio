@@ -8,13 +8,14 @@ function App() {
 
   return (
     <div className="container">
+      
       <div className="content">
         {section === 'home' && <Home />}
         {section === 'about' && <About />}
         {section === 'projects' && <Projects />}
         {section === 'contact' && <Contact />}
       </div>
-      
+
       <nav className="links">
         <a href="#" onClick={() => setSection('home')}>
           Home
