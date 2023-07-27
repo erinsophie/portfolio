@@ -39,9 +39,11 @@ h6 {
 }
 
 :root {
-  --black: #2E2E2E;
-  --white: #FFFFFF;
-  --light-grey: #CFCFCF;
+  --black: #2e2e2e;
+  --white: #ffffff;
+  --light-grey: #cfcfcf;
+  --bg: var(--white);
+  --pink: #df00cb;
+  --blue: #005cd9;
+  --purple: #8e00df;
 }
-
-

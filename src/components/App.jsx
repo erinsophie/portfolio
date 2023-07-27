@@ -4,12 +4,14 @@ import Home from './Home';
 import About from './About';
 import Contact from './Contact';
 import Footer from './Footer';
+import Background from './Background';
 
 function App() {
   const [section, setSection] = useState('home');
 
   return (
     <div className="container">
+      <Background />
       <div className="content">
         {section === 'home' && <Home />}
         {section === 'about' && <About />}

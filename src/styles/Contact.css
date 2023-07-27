@@ -29,8 +29,8 @@
 .submit-btn {
   background-color: transparent;
   border: 1px solid var(--white);
-  width: 20%;
-  padding: 10px;
+  width: 25%;
+  padding: 8px;
   color: var(--white);
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
