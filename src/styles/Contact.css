@@ -22,16 +22,16 @@
 .form-section input,
 .form-section textarea {
   background-color: transparent;
-  border: 1px solid var(--white);
-  color: var(--white);
+  border: 1px solid var(--black);
+  color: var(--black);
 }
 
 .submit-btn {
   background-color: transparent;
-  border: 1px solid var(--white);
+  border: 1px solid var(--black);
   width: 25%;
   padding: 8px;
-  color: var(--white);
+  color: var(--black);
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }

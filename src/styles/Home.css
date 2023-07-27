@@ -3,3 +3,7 @@
   flex-direction: column;
   gap: 8px;
 }
+
+.title-name {
+  font-size: 2.5rem;
+}

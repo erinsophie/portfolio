@@ -4,15 +4,15 @@ import 'flickity/css/flickity.css';
 
 function Carousel() {
   const icons = [
-    { icon: 'devicon-html5-plain colored', label: 'HTML5' },
-    { icon: 'devicon-css3-plain colored', label: 'CSS3' },
-    { icon: 'devicon-javascript-plain colored', label: 'Javascript' },
-    { icon: 'devicon-react-original colored', label: 'React' },
-    { icon: 'devicon-git-plain colored', label: 'Git' },
-    { icon: 'devicon-github-original colored', label: 'GitHub' },
-    { icon: 'devicon-jest-plain colored', label: 'Jest' },
-    { icon: 'devicon-webpack-plain colored', label: 'Webpack' },
-    { icon: 'devicon-npm-original-wordmark colored', label: 'NPM' },
+    { icon: 'devicon-html5-plain', label: 'HTML5' },
+    { icon: 'devicon-css3-plain', label: 'CSS3' },
+    { icon: 'devicon-javascript-plain', label: 'Javascript' },
+    { icon: 'devicon-react-original', label: 'React' },
+    { icon: 'devicon-git-plain', label: 'Git' },
+    { icon: 'devicon-github-original', label: 'GitHub' },
+    { icon: 'devicon-jest-plain', label: 'Jest' },
+    { icon: 'devicon-webpack-plain', label: 'Webpack' },
+    { icon: 'devicon-npm-original-wordmark', label: 'NPM' },
   ];
 
   useEffect(() => {
@@ -20,6 +20,7 @@ function Carousel() {
       cellAlign: 'left',
       contain: true,
       wrapAround: true,
+      pageDots: false,
     });
 
     return () => flkty.destroy();
