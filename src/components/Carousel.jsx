@@ -1,9 +1,8 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
+import Flickity from 'flickity';
+import 'flickity/css/flickity.css';
 
 function Carousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const iconsToShow = 5;
-
   const icons = [
     { icon: 'devicon-html5-plain colored', label: 'HTML5' },
     { icon: 'devicon-css3-plain colored', label: 'CSS3' },
@@ -16,38 +15,30 @@ function Carousel() {
     { icon: 'devicon-npm-original-wordmark colored', label: 'NPM' },
   ];
 
-  const totalIcons = icons.length;
+  useEffect(() => {
+    const flkty = new Flickity('.icons-carousel', {
+      cellAlign: 'left',
+      contain: true,
+      wrapAround: true,
+    });
 
-  function handleNext() {
-    setCurrentIndex((currentIndex + 1) % totalIcons);
-  }
-
-  function handlePrev() {
-    setCurrentIndex(currentIndex > 0 ? currentIndex - 1 : totalIcons - 1);
-  }
-
-  const getVisibleIcons = () => {
-    const visibleIcons = [];
-    for (let i = 0; i < iconsToShow; i++) {
-      visibleIcons.push(icons[(currentIndex + i) % totalIcons]);
-    }
-    return visibleIcons;
-  };
+    return () => {
+      flkty.destroy();
+    };
+  }, []);
 
   return (
-    <div className="skills-container">
-      <button onClick={handlePrev}>prev</button>
+    <div className="icons-container">
+      <p>Technologies & Tools</p>
 
-      <div className="skills-carousel">
-        {getVisibleIcons().map((skill, index) => (
-          <div key={index} className="skill">
-            <i className={skill.icon}></i>
-            <p>{skill.label}</p>
+      <div className="icons-carousel">
+        {icons.map((item, index) => (
+          <div key={index} className="icon">
+            <i className={item.icon} alt={`carousel-image-${index}`} />
+            <p>{item.label}</p>
           </div>
         ))}
       </div>
-
-      <button onClick={handleNext}>next</button>
     </div>
   );
 }
