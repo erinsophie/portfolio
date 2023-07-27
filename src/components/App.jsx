@@ -3,6 +3,7 @@ import '../styles/App.css';
 import Home from './Home';
 import About from './About';
 import Contact from './Contact';
+import Footer from './Footer';
 
 function App() {
   const [section, setSection] = useState('home');
@@ -30,6 +31,7 @@ function App() {
           Contact
         </a>
       </nav>
+      <Footer />
     </div>
   );
 }

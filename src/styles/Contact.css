@@ -1,14 +1,41 @@
-.contact {
-  border: 1px solid red;
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: 1px solid red;
+  margin-top: 40px;
 }
 
 .form-section {
-    border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-section > *:focus {
+  outline: none;
+}
+
+.form-section input {
+  padding: 10px;
+}
+
+.form-section input,
+.form-section textarea {
+  background-color: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+.submit-btn {
+  background-color: transparent;
+  border: 1px solid var(--white);
+  width: 20%;
+  padding: 10px;
+  color: var(--white);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+  transform: scale(1.1);
 }

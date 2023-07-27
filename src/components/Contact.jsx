@@ -10,7 +10,7 @@ function Contact() {
 
   return (
     <div className="contact">
-      <p>Want to get in touch?</p>
+      <p className="small-title">Want to get in touch?</p>
 
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-section">
@@ -26,8 +26,8 @@ function Contact() {
         </div>
 
         <div className="form-section">
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
+          <label htmlFor="message">I'd like to chat about:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
           <ValidationError
             prefix="Message"
             field="message"
@@ -35,7 +35,11 @@ function Contact() {
           />
         </div>
 
-        <button type="submit" disabled={state.submitting}>
+        <button
+          type="submit"
+          disabled={state.submitting}
+          className="submit-btn"
+        >
           Send message
         </button>
       </form>
