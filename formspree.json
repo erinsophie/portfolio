@@ -1,0 +1,13 @@
+{
+  "forms": {
+    "contactForm": {
+      "name": "Contact Form",
+      "actions": [{ "type": "email", "to": "sophielittle33@gmail.com" }],
+      "fields": {
+        "name": { "required": "true", "type": "text" },
+        "email": { "required": "true", "type": "email" },
+        "message": { "required": "true", "type": "text" }
+      }
+    }
+  }
+}

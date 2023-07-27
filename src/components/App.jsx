@@ -2,13 +2,13 @@ import { useState } from 'react';
 import '../styles/App.css';
 import Home from './Home';
 import About from './About';
+import Contact from './Contact';
 
 function App() {
   const [section, setSection] = useState('home');
 
   return (
     <div className="container">
-      
       <div className="content">
         {section === 'home' && <Home />}
         {section === 'about' && <About />}

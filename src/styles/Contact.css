@@ -1,0 +1,14 @@
+.contact {
+  border: 1px solid red;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid red;
+}
+
+.form-section {
+    border: 1px solid red;
+}
