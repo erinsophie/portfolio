@@ -9,7 +9,7 @@
 }
 
 .icons-carousel {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .icon i {
@@ -22,4 +22,8 @@
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.small-title {
+  font-size: 1.3rem;
 }

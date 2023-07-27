@@ -2,7 +2,6 @@ import '../styles/About.css';
 import Carousel from './Carousel';
 
 function About() {
-
   return (
     <div className="about">
       <div className="about-text">
@@ -27,7 +26,10 @@ function About() {
         </p>
       </div>
 
-      <Carousel />
+      <div className="icons-container">
+        <p className="small-title">Technologies & Tools</p>
+        <Carousel />
+      </div>
     </div>
   );
 }

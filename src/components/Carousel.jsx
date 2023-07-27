@@ -22,15 +22,10 @@ function Carousel() {
       wrapAround: true,
     });
 
-    return () => {
-      flkty.destroy();
-    };
+    return () => flkty.destroy();
   }, []);
 
   return (
-    <div className="icons-container">
-      <p>Technologies & Tools</p>
-
       <div className="icons-carousel">
         {icons.map((item, index) => (
           <div key={index} className="icon">
@@ -39,7 +34,6 @@ function Carousel() {
           </div>
         ))}
       </div>
-    </div>
   );
 }
 
