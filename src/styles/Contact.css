@@ -15,18 +15,24 @@
   outline: none;
 }
 
-.form-section input {
-  padding: 10px;
-}
-
 .form-section input,
 .form-section textarea {
   background-color: transparent;
   border: 1px solid var(--black);
   color: var(--black);
+  padding: 7px;
 }
 
 .submit-btn {
-  width: 25%;
+  width: 32%;
   padding: 8px;
+}
+
+/* for desktop */
+
+@media (min-width: 600px) {
+  .submit-btn {
+    width: 25%;
+    padding: 8px;
+  }
 }

@@ -10,6 +10,7 @@ import Projects from './Projects';
 function App() {
   const [section, setSection] = useState('home');
   const [animate, setAnimate] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     setAnimate(true);
@@ -25,6 +26,10 @@ function App() {
     <div className="container">
       <Background />
 
+      <button onClick={() => setMenuOpen(!menuOpen)} className="mobile-nav-btn">
+        <i className={menuOpen ? 'fa-solid fa-x' : 'fa-solid fa-bars'}></i>
+      </button>
+
       <div className={`content ${animate ? 'swipeEffect' : ''}`}>
         {section === 'home' && <Home />}
         {section === 'about' && <About />}
@@ -32,17 +37,41 @@ function App() {
         {section === 'contact' && <Contact />}
       </div>
 
-      <nav className="links">
-        <a href="#" onClick={() => setSection('home')}>
+      <nav className={`links ${menuOpen ? 'active' : ''}`}>
+        <a
+          href="#"
+          onClick={() => {
+            setSection('home');
+            setMenuOpen(false);
+          }}
+        >
           Home
         </a>
-        <a href="#" onClick={() => setSection('about')}>
+        <a
+          href="#"
+          onClick={() => {
+            setSection('about');
+            setMenuOpen(false);
+          }}
+        >
           About
         </a>
-        <a href="#" onClick={() => setSection('projects')}>
+        <a
+          href="#"
+          onClick={() => {
+            setSection('projects');
+            setMenuOpen(false);
+          }}
+        >
           Projects
         </a>
-        <a href="#" onClick={() => setSection('contact')}>
+        <a
+          href="#"
+          onClick={() => {
+            setSection('contact');
+            setMenuOpen(false);
+          }}
+        >
           Contact
         </a>
       </nav>

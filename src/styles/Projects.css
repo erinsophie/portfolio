@@ -25,13 +25,13 @@
 }
 
 .project-img {
-  min-width: 360px;
-  max-height: 230px;
+  min-width: 300px;
   height: auto;
 }
 
 .project-main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 15px;
 }
@@ -46,7 +46,7 @@
   display: flex;
   gap: 18px;
   padding: 6px;
-  border: 1px oslid var(--black)
+  border: 1px oslid var(--black);
 }
 
 .project-links a {
@@ -90,4 +90,18 @@
 
 .swipeDownEffect {
   animation: swipeDown 500ms ease-in-out;
+}
+
+/* for desktop */
+
+@media (min-width: 600px) {
+  .project-img {
+    min-width: 400px;
+    max-width: 600px;
+  }
+
+  .project-main {
+    display: flex;
+    flex-direction: row;
+  }
 }

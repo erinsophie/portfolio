@@ -13,7 +13,7 @@
 }
 
 .icon i {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .icon {
@@ -24,8 +24,28 @@
   padding-right: 20px;
 }
 
-
-
 .small-title {
   font-size: 1.3rem;
+}
+
+.flickity-button:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.icons-carousel .flickity-prev-next-button {
+  width: 22px;
+  height: 22px;
+}
+
+/* for desktop */
+
+@media (min-width: 600px) {
+  .icons-carousel .flickity-prev-next-button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .icon i {
+    font-size: 4rem;
+  }
 }

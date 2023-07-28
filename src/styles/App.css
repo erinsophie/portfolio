@@ -1,10 +1,7 @@
 .container {
-  padding-left: 20%;
-  padding-right: 20%;
   height: 100vh;
   overflow: hidden;
   display: flex;
-  gap: 60px;
   align-items: center;
   font-size: 1rem;
   color: var(--black);
@@ -13,6 +10,8 @@
 
 .content {
   flex: 1;
+
+  padding: 6%;
 }
 
 /* links and buttons */
@@ -31,10 +30,6 @@ a:hover {
   transform: scale(1.1);
 }
 
-.flickity-button:hover {
-  transform: translateY(-50%) scale(1.1);
-}
-
 /* buttons */
 
 button {
@@ -43,16 +38,37 @@ button {
 
 /* section links */
 
-.links {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .links a,
 .footer a {
   font-size: 1.1rem;
+}
+
+/* mobile menu  */
+
+.mobile-nav-btn {
+  border: none;
+  position: absolute;
+  top: 2%;
+  right: 4%;
+  font-size: 1.6rem;
+  z-index: 1;
+}
+
+.links {
+  display: none;
+}
+
+.links.active {
+  position: fixed;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  top: 0;
+  padding: 60px 0 60px 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* footer */
@@ -85,4 +101,29 @@ button {
 
 .swipeEffect {
   animation: swipeIn 800ms ease-in-out;
+}
+
+/* for desktop */
+
+@media (min-width: 600px) {
+  .mobile-nav-btn {
+    display: none;
+  }
+
+  .container {
+    padding-left: 20%;
+    padding-right: 20%;
+    gap: 60px;
+  }
+
+  .content {
+    padding: 0;
+  }
+
+  .links {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
