@@ -61,3 +61,33 @@
   font-size: 1.1rem;
   margin-bottom: 12px;
 }
+
+@keyframes swipeDown {
+  0% {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.swipeUpEffect {
+  animation: swipeUp 500ms ease-in-out;
+}
+
+@keyframes swipeUp {
+  0% {
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.swipeDownEffect {
+  animation: swipeDown 500ms ease-in-out;
+}

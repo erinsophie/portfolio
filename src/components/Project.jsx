@@ -1,6 +1,6 @@
-function Project({ title, description, site, source, image, tech }) {
+function Project({ title, description, site, source, image, tech, className }) {
   return (
-    <div className="project">
+    <div className={`project ${className}`}>
       <h2 className="project-title">{title}</h2>
 
       <div className="project-main">

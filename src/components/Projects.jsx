@@ -1,32 +1,33 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import '../styles/Projects.css';
 import Project from './Project';
 import projectsList from './ProjectData';
 
 function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    setAnimate(true);
-
-    const timer = setTimeout(() => {
-      setAnimate(false);
-    }, 800);
-
-    return () => clearTimeout(timer);
-  }, [currentIndex]);
+  const [swipeDirection, setSwipeDirection] = useState('none');
 
   function handleNext() {
     if (currentIndex < projectsList.length - 1)
       setCurrentIndex(currentIndex + 1);
     if (currentIndex === projectsList.length - 1) setCurrentIndex(0);
+
+    triggerAnimation('up');
   }
 
   function handlePrev() {
     if (currentIndex > 0) setCurrentIndex(currentIndex - 1);
     if (currentIndex === 0) setCurrentIndex(projectsList.length - 1);
+
+    triggerAnimation('down');
   }
+
+  const triggerAnimation = (direction) => {
+    setSwipeDirection(direction);
+    setTimeout(() => {
+      setSwipeDirection('none');
+    }, 500);
+  };
 
   return (
     <div className="projects">
@@ -34,9 +35,16 @@ function Projects() {
         <i className="fa-solid fa-chevron-up"></i>
       </button>
 
-      <div className={animate ? 'swipeEffect' : ''}>
-        <Project {...projectsList[currentIndex]} />
-      </div>
+      <Project
+        {...projectsList[currentIndex]}
+        className={
+          swipeDirection === 'up'
+            ? 'swipeUpEffect'
+            : swipeDirection === 'down'
+            ? 'swipeDownEffect'
+            : ''
+        }
+      />
 
       <button onClick={handlePrev} className="prev-project">
         <i className="fa-solid fa-chevron-down"></i>
