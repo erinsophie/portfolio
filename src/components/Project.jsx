@@ -1,11 +1,26 @@
-function Project({ title, description, site, source, image }) {
+function Project({ title, description, site, source, image, tech }) {
   return (
     <div className="project">
-      <img src={image} alt={title} />
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <a href={site}>Live site</a>
-      <a href={source}>Github repo</a>
+      <h2 className="project-title">{title}</h2>
+
+      <div className="project-main">
+        <img src={image} alt={title} className="project-img" />
+        <div className="project-info">
+          <div>
+            <p className="bold">Description: </p>
+            <p>{description}</p>
+          </div>
+          <div>
+            <p className="bold">Technologies: </p>
+            <p> {tech}</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="project-links">
+        <a href={site}>Live site</a>
+        <a href={source}>Github repo</a>
+      </div>
     </div>
   );
 }

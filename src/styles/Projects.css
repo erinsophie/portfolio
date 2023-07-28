@@ -1,9 +1,58 @@
 .projects {
-  max-width: 800px;
-  padding: 20px;
-  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.next-project,
+.prev-project {
+  font-size: 2.5rem;
+  background-color: transparent;
+  border: none;
 }
 
 .project {
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid var(--black);
+}
+
+.project-img {
+  width: 430px;
+  max-height: 230px;
+  height: auto;
+}
+
+.project-main {
+  display: flex;
+  gap: 15px;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-links {
+  display: flex;
+  gap: 18px;
+  padding: 6px;
+  border: 1px oslid var(--black)
+}
+
+.project-links a {
+  text-decoration: none;
+  color: var(--black);
+  padding: 10px;
+  border: 1px solid var(--black);
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
 }

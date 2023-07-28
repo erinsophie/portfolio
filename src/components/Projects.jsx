@@ -10,14 +10,21 @@ function Projects() {
       site: 'https://erinsophie.github.io/weather-app/',
       source: 'https://github.com/erinsophie/weather-app',
       image: weatherAppImg,
+      tech: 'HTML, CSS, Javascript, Weather API',
     },
   ];
 
   return (
     <div className="projects">
+      <button className="next-project">
+        <i className="fa-solid fa-chevron-up"></i>
+      </button>
       {projectsList.map((project, index) => (
         <Project key={index} {...project} />
       ))}
+      <button className="prev-project">
+        <i className="fa-solid fa-chevron-down"></i>
+      </button>
     </div>
   );
 }
