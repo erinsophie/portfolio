@@ -12,7 +12,11 @@ function Project({ title, description, site, source, image, tech }) {
           </div>
           <div>
             <p className="bold">Technologies: </p>
-            <p> {tech}</p>
+            <ul className="tech-list">
+              {tech.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

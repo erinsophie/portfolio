@@ -19,6 +19,7 @@
 
 button,
 a {
+  cursor: pointer;
   color: var(--black);
   text-decoration: none;
   background-color: transparent;
