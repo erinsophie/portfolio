@@ -11,7 +11,7 @@
   gap: 4px;
 }
 
-.form-section > *:focus {
+.form-section *:focus{
   outline: none;
 }
 

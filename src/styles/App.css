@@ -23,7 +23,8 @@
   gap: 20px;
 }
 
-.links a {
+.links a,
+.footer a {
   color: var(--black);
   text-decoration: none;
   transition: transform 0.2s ease-in-out;
@@ -45,12 +46,6 @@
   padding: 20px;
   padding-right: 30px;
   font-size: 1.2rem;
-}
-
-.footer a {
-  color: var(--black);
-  text-decoration: none;
-  transition: transform 0.2s ease-in-out;
 }
 
 .footer i {

@@ -1,0 +1,9 @@
+.projects {
+  max-width: 800px;
+  padding: 20px;
+  border: 2px solid green;
+}
+
+.project {
+  border: 1px solid red;
+}

@@ -5,6 +5,7 @@ import About from './About';
 import Contact from './Contact';
 import Footer from './Footer';
 import Background from './Background';
+import Projects from './Projects';
 
 function App() {
   const [section, setSection] = useState('home');
