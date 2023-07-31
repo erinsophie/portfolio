@@ -25,7 +25,8 @@
 }
 
 .project-img {
-  width: 300px;
+  width: 100%;
+  max-width: 500px;
   height: auto;
 }
 
@@ -93,9 +94,10 @@
 
 /* for desktop */
 
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .project-img {
     width: 380px;
+    max-width: 380px;
   }
 
   .project-main {
