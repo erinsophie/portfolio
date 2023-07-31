@@ -25,7 +25,7 @@
 }
 
 .project-img {
-  min-width: 300px;
+  width: 300px;
   height: auto;
 }
 
@@ -46,7 +46,6 @@
   display: flex;
   gap: 18px;
   padding: 6px;
-  border: 1px oslid var(--black);
 }
 
 .project-links a {
@@ -96,12 +95,10 @@
 
 @media (min-width: 600px) {
   .project-img {
-    min-width: 400px;
-    max-width: 600px;
+    width: 380px;
   }
 
   .project-main {
-    display: flex;
     flex-direction: row;
   }
 }
