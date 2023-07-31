@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
 import '../styles/App.css';
-import Home from './Home';
-import About from './About';
-import Contact from './Contact';
-import Footer from './Footer';
 import Background from './Background';
-import Projects from './Projects';
+import MobileBtn from './MobileBtn';
+import Content from './Content';
 import Links from './Links';
+import Footer from './Footer';
 
 function App() {
   const [section, setSection] = useState('home');
@@ -26,18 +24,8 @@ function App() {
   return (
     <div className="container">
       <Background />
-
-      <button onClick={() => setMenuOpen(!menuOpen)} className="mobile-nav-btn">
-        <i className={menuOpen ? 'fa-solid fa-x' : 'fa-solid fa-bars'}></i>
-      </button>
-
-      <div className={`content ${animate ? 'swipeEffect' : ''}`}>
-        {section === 'home' && <Home />}
-        {section === 'about' && <About />}
-        {section === 'projects' && <Projects />}
-        {section === 'contact' && <Contact />}
-      </div>
-
+      <MobileBtn setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
+      <Content section={section} animate={animate} />
       <Links
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
