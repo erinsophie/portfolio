@@ -2,7 +2,7 @@
 
 ## [Live Demo](https://cozy-torte-45d881.netlify.app)
 
-![Portfolio](./src/img/portfolio.png)
+![Portfolio](./src/assets/img/portfolio.png)
 
 # Technologies Used
 
