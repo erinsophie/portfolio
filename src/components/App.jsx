@@ -6,6 +6,7 @@ import Contact from './Contact';
 import Footer from './Footer';
 import Background from './Background';
 import Projects from './Projects';
+import Links from './Links';
 
 function App() {
   const [section, setSection] = useState('home');
@@ -37,44 +38,11 @@ function App() {
         {section === 'contact' && <Contact />}
       </div>
 
-      <nav className={`links ${menuOpen ? 'active' : ''}`}>
-        <a
-          href="#"
-          onClick={() => {
-            setSection('home');
-            setMenuOpen(false);
-          }}
-        >
-          Home
-        </a>
-        <a
-          href="#"
-          onClick={() => {
-            setSection('about');
-            setMenuOpen(false);
-          }}
-        >
-          About
-        </a>
-        <a
-          href="#"
-          onClick={() => {
-            setSection('projects');
-            setMenuOpen(false);
-          }}
-        >
-          Projects
-        </a>
-        <a
-          href="#"
-          onClick={() => {
-            setSection('contact');
-            setMenuOpen(false);
-          }}
-        >
-          Contact
-        </a>
-      </nav>
+      <Links
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+        setSection={setSection}
+      />
       <Footer />
     </div>
   );
