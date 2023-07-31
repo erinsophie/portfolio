@@ -26,7 +26,7 @@ function Contact() {
         </div>
 
         <div className="form-section">
-          <label htmlFor="message">I'd like to chat about:</label>
+          <label htmlFor="message">I&apos;d like to chat about:</label>
           <textarea id="message" name="message" rows="5" required></textarea>
           <ValidationError
             prefix="Message"

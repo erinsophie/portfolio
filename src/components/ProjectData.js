@@ -25,7 +25,8 @@ const projectsList = [
 
   {
     title: 'Battleship',
-    description: 'Play against the computer in this interactive browser-based game akin to the Hasbro™ board game, Battleship.',
+    description:
+      'Play against the computer in this interactive browser-based game akin to the Hasbro™ board game, Battleship.',
     site: 'https://erinsophie.github.io/battleship/',
     source: 'https://github.com/erinsophie/battleship',
     image: battleshipImg,

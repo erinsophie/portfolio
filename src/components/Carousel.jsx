@@ -27,14 +27,14 @@ function Carousel() {
   }, []);
 
   return (
-      <div className="icons-carousel">
-        {icons.map((item, index) => (
-          <div key={index} className="icon">
-            <i className={item.icon} alt={`carousel-image-${index}`} />
-            <p>{item.label}</p>
-          </div>
-        ))}
-      </div>
+    <div className="icons-carousel">
+      {icons.map((item, index) => (
+        <div key={index} className="icon">
+          <i className={item.icon} alt={`carousel-image-${item.label}`} />
+          <p>{item.label}</p>
+        </div>
+      ))}
+    </div>
   );
 }
 

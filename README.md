@@ -1,8 +1,18 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## [Live Demo]()
 
-Currently, two official plugins are available:
+![Portfolio](./src/img/portfolio.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Technologies Used
+
+- HTML
+- CSS
+- Javascript
+- React
+- Formspree
+- Flickity
+
+- This is a personal portfolio containing contact info, about me section and a showcase of my projects!
+- Portfolio is regularly updated with new projects and skills 
+- I used Vite to initialise this project since create-react-app is now deprecated and followed Vite's recommended file structure
