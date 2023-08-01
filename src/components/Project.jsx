@@ -22,8 +22,12 @@ function Project({ title, description, site, source, image, tech, className }) {
       </div>
 
       <div className="project-links">
-        <a href={site}>Live site</a>
-        <a href={source}>Github repo</a>
+        <a href={site} target="_blank" rel="noopener noreferrer">
+          Live site
+        </a>
+        <a href={source} target="_blank" rel="noopener noreferrer">
+          Github repo
+        </a>
       </div>
     </div>
   );
