@@ -1,6 +1,7 @@
 import weatherAppImg from '../assets/img/weather-app.png';
 import todoListImg from '../assets/img/todo-list.png';
 import battleshipImg from '../assets/img/battleship.png';
+import memoryCardImg from '../assets/img/memory-card.png';
 
 const projectsList = [
   {
@@ -31,6 +32,16 @@ const projectsList = [
     source: 'https://github.com/erinsophie/battleship',
     image: battleshipImg,
     tech: ['HTML', 'CSS', 'Javascript', 'Jest'],
+  },
+
+  {
+    title: 'Memory Card',
+    description:
+      'Legend of Zelda-inspired memory game. Test your memory by making sure to only click on every card once! Plus added music from the game',
+    site: 'https://lively-dolphin-d4646a.netlify.app',
+    source: 'https://github.com/erinsophie/memory-card',
+    image: memoryCardImg,
+    tech: ['HTML', 'CSS', 'Javascript', 'React'],
   },
 ];
 
